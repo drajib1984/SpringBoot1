@@ -1,6 +1,6 @@
-package com.springboottutorial.Service;
+package com.springboottutorial.Employee.Service;
 
-import com.springboottutorial.Entity.Employee;
+import com.springboottutorial.Employee.Entity.Employee;
 
 import java.util.List;
 

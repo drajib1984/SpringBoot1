@@ -1,4 +1,4 @@
-package com.springboottutorial.Controller;
+package com.springboottutorial.Employee.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

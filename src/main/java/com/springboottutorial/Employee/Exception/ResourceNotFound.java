@@ -1,4 +1,4 @@
-package com.springboottutorial.Exception;
+package com.springboottutorial.Employee.Exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

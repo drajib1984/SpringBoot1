@@ -1,9 +1,9 @@
-package com.springboottutorial.SericeImpl;
+package com.springboottutorial.Employee.SericeImpl;
 
-import com.springboottutorial.Entity.Employee;
-import com.springboottutorial.Exception.ResourceNotFound;
-import com.springboottutorial.Repository.EmployeeRepository;
-import com.springboottutorial.Service.EmployeeService;
+import com.springboottutorial.Employee.Entity.Employee;
+import com.springboottutorial.Employee.Exception.ResourceNotFound;
+import com.springboottutorial.Employee.Repository.EmployeeRepository;
+import com.springboottutorial.Employee.Service.EmployeeService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.stereotype.Service;

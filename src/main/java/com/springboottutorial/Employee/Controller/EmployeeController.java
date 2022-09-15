@@ -1,8 +1,7 @@
-package com.springboottutorial.Controller;
+package com.springboottutorial.Employee.Controller;
 
-import com.springboottutorial.Entity.Employee;
-import com.springboottutorial.Exception.ResourceNotFound;
-import com.springboottutorial.Service.EmployeeService;
+import com.springboottutorial.Employee.Entity.Employee;
+import com.springboottutorial.Employee.Service.EmployeeService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
