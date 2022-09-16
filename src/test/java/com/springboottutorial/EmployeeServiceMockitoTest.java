@@ -15,8 +15,8 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest(classes ={ServiceMockitoTest.class} )
-public class ServiceMockitoTest {
+@SpringBootTest(classes ={EmployeeServiceMockitoTest.class} )
+public class EmployeeServiceMockitoTest {
     @Mock
     EmployeeRepository employeeRepository;
     @InjectMocks
