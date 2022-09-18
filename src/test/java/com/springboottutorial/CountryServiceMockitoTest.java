@@ -2,25 +2,26 @@ package com.springboottutorial;
 
 import com.springboottutorial.Country.Entity.Country;
 import com.springboottutorial.Country.Repository.CountryRepository;
-import com.springboottutorial.Country.Service.CountryService;
 import com.springboottutorial.Country.ServiceImpl.CountryServiceImpl;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
+
 
 @SpringBootTest(classes = CountryServiceMockitoTest.class)
+@RunWith(SpringRunner.class)
 public class CountryServiceMockitoTest {
     @Mock
     CountryRepository countryRepository;
@@ -47,7 +48,8 @@ public class CountryServiceMockitoTest {
         int countryId=105;
         Optional<Country> countryById = countryService.getCountryById(105);
         assertEquals(countryId,countryById.get().getCountryId());
-
-
     }
+
+
+
 }

@@ -24,12 +24,23 @@ public class CountryController {
 
     @GetMapping("/get")
     public ResponseEntity<List<Country>> getAllCountries() {
-        return new ResponseEntity<List<Country>>(countryService.getAllCountries(), HttpStatus.OK);
-    }
+            List<Country> allCountries = countryService.getAllCountries();
+           if (!allCountries.isEmpty()) {
+               return new ResponseEntity<List<Country>>(allCountries, HttpStatus.OK);
+           }
+            else
+            return new ResponseEntity<List<Country>>(HttpStatus.NOT_FOUND);
+        }
 
     @GetMapping("/get/{id}")
     public ResponseEntity<Optional<Country>> getCountryById(@PathVariable("id") int countryId) {
-        return new ResponseEntity<Optional<Country>>(countryService.getCountryById(countryId), HttpStatus.OK);
+        Optional<Country> countryById = countryService.getCountryById(countryId);
+        if (countryById.isPresent()){
+            return new ResponseEntity<Optional<Country>>(countryService.getCountryById(countryId), HttpStatus.OK);
+        }
+        else
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
     }
 
     @GetMapping("/get/countryName")
