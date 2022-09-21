@@ -18,7 +18,7 @@ public class CourseMaterial {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "course_material_sequence")
     private Long courseMaterialId;
     private String url;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL,optional = false)
     @JoinColumn(name ="course_id" , referencedColumnName = "courseId")
     private Course course;
 
